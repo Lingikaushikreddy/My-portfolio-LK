@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaushik Reddy | Data Analyst & AI Engineer</title>
+    <link rel="stylesheet" href="styles-about.css">
+
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Modern Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Chart.js for Data Visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Cloud Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="profile-section">
+                        <div class="avatar-container">
+                            <img src="image/avatar.png" alt="Kaushik Reddy" class="profile-avatar">
+                            <div class="status-indicator online"></div>
+                        </div>
+                        <div class="profile-info">
+                            <h1 class="profile-name">Kaushik Reddy</h1>
+                            <p class="profile-title">Data Analyst & AI Engineer</p>
+                            <div class="profile-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Fairfax, VA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="3">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="10">0</div>
+                            <div class="stat-label">Projects Delivered</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="15">0</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                    </div>
+                    <div class="header-actions">
+                        <a href="mailto:kaushikreddylingireddy2002@gmail.com" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Contact Me
+                        </a>
+                        <a href="index.html" class="btn btn-secondary">
+                            <i class="fas fa-shapes"></i>
+                            Portfolio View
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Content -->
+        <main class="dashboard-main">
+            <!-- Navigation Tabs -->
+            <nav class="dashboard-nav" aria-label="Dashboard navigation">
+                <div class="nav-tabs" role="tablist">
+                    <button class="nav-tab active" data-tab="overview" role="tab" aria-selected="true">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Overview
+                    </button>
+                    <button class="nav-tab" data-tab="experience" role="tab" aria-selected="false">
+                        <i class="fas fa-briefcase"></i>
+                        Experience
+                    </button>
+                    <button class="nav-tab" data-tab="skills" role="tab" aria-selected="false">
+                        <i class="fas fa-code"></i>
+                        Skills
+                    </button>
+                    <button class="nav-tab" data-tab="projects" role="tab" aria-selected="false">
+                        <i class="fas fa-project-diagram"></i>
+                        Projects
+                    </button>
+                    <button class="nav-tab" data-tab="education" role="tab" aria-selected="false">
+                        <i class="fas fa-graduation-cap"></i>
+                        Education
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Overview Tab -->
+                <div class="tab-pane active" id="overview" role="tabpanel">
+                    <div class="dashboard-grid">
+                        <!-- About Me Card -->
+                        <div class="dashboard-card card-large">
+                            <div class="card-header">
+                                <h3><i class="fas fa-user"></i> About Me</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Innovative Data Analyst and AI Engineer with expertise in high-performance systems, generative AI, and predictive analytics. Proven track record building privacy-preserving infrastructure (Rust/Python), deploying voice-first AI agents, and crafting immersive 3D web experiences.</p>
+                                <div class="skills-preview">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Rust</span>
+                                    <span class="skill-tag">Generative AI</span>
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">FastAPI</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AI & ML Expertise Card -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-brain"></i> AI & ML Expertise</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="cloud-metrics">
+                                    <div class="metric">
+                                        <i class="fas fa-robot"></i>
+                                        <div>
+                                            <span class="metric-value">LLMs</span>
+                                            <span class="metric-label">GPT-4, Claude</span>
+                                        </div>
+                                    </div>
+                                    <div class="metric">
+                                        <i class="fas fa-microphone"></i>
+                                        <div>
+                                            <span class="metric-value">Voice AI</span>
+                                            <span class="metric-label">ElevenLabs, Whisper</span>
+                                        </div>
+                                    </div>
+                                    <div class="metric">
+                                        <i class="fas fa-lock"></i>
+                                        <div>
+                                            <span class="metric-value">Privacy</span>
+                                            <span class="metric-label">Federated Learning</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity Card -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-chart-line"></i> Recent Activity</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>Launched Thrill AI - hospitality voice platform</p>
+                                        <span class="activity-time">2025</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>Built Aegis zero-trust security framework</p>
+                                        <span class="activity-time">2025</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-heartbeat"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>Developed SwasthyaSahayak medical triage AI</p>
+                                        <span class="activity-time">2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Performance Metrics Card -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-tachometer-alt"></i> Performance</h3>
+                            </div>
+                            <div class="card-content">
+                                <canvas id="performanceChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Tab -->
+                <div class="tab-pane" id="experience" role="tabpanel">
+                    <div class="experience-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Founder & AI Engineer</h3>
+                                    <span class="company">Thrill AI</span>
+                                    <span class="duration">2025 - Present</span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Building a next-generation hospitality operating system leveraging real-time voice intelligence with native-language voice agents and AI-powered guest experiences.</p>
+                                    <div class="achievements">
+                                        <div class="achievement">
+                                            <i class="fas fa-microphone"></i>
+                                            <span>Built multi-language voice AI agents (Hindi & Telugu)</span>
+                                        </div>
+                                        <div class="achievement">
+                                            <i class="fas fa-magic"></i>
+                                            <span>Designed cinematic glassmorphic UI with Next.js 16</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Full Stack AI Engineer Intern</h3>
+                                    <span class="company">Quadrant Technologies</span>
+                                    <span class="duration">2025</span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Built a company portal with Azure AI Foundry-powered chatbots, REST API integrations, database architecture, payroll systems, and a full-stack web application with AI features.</p>
+                                    <div class="achievements">
+                                        <div class="achievement">
+                                            <i class="fas fa-robot"></i>
+                                            <span>Integrated Azure AI Foundry chatbots into portal</span>
+                                        </div>
+                                        <div class="achievement">
+                                            <i class="fas fa-server"></i>
+                                            <span>Built full web app with database, payroll & UI</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Business Analyst Intern</h3>
+                                    <span class="company">Mannem Marketing</span>
+                                    <span class="duration">Jan 2023 - Jan 2024</span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Optimized data accuracy across company registers. Developed visual dashboards using Tableau/Excel for sales performance and improved customer targeting.</p>
+                                    <div class="achievements">
+                                        <div class="achievement">
+                                            <i class="fas fa-chart-bar"></i>
+                                            <span>Built Tableau dashboards for sales performance</span>
+                                        </div>
+                                        <div class="achievement">
+                                            <i class="fas fa-bullseye"></i>
+                                            <span>Enhanced local customer targeting with Python (pandas)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Technical Team Member</h3>
+                                    <span class="company">IEEE-NPSS, VIT</span>
+                                    <span class="duration">Jul 2020 - Jun 2021</span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Enhanced ML models for signal classification and conducted Python workshops for 100+ students with a 4.5/5 rating.</p>
+                                    <div class="achievements">
+                                        <div class="achievement">
+                                            <i class="fas fa-brain"></i>
+                                            <span>15% accuracy boost in ML signal classification</span>
+                                        </div>
+                                        <div class="achievement">
+                                            <i class="fas fa-chalkboard-teacher"></i>
+                                            <span>Led NumPy/Pandas workshops for 100+ students</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Tab -->
+                <div class="tab-pane" id="skills" role="tabpanel">
+                    <div class="skills-dashboard">
+                        <div class="skills-grid">
+                            <div class="skills-card">
+                                <h3><i class="fas fa-brain"></i> AI & Machine Learning</h3>
+                                <canvas id="cloudSkillsChart"></canvas>
+                                <div class="skill-tags">
+                                    <span class="skill-tag expert">PyTorch</span>
+                                    <span class="skill-tag advanced">LangChain</span>
+                                    <span class="skill-tag expert">Scikit-learn</span>
+                                    <span class="skill-tag advanced">RAG</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-card">
+                                <h3><i class="fas fa-code"></i> Programming</h3>
+                                <canvas id="programmingSkillsChart"></canvas>
+                                <div class="skill-tags">
+                                    <span class="skill-tag expert">Python</span>
+                                    <span class="skill-tag advanced">Rust</span>
+                                    <span class="skill-tag expert">SQL</span>
+                                    <span class="skill-tag intermediate">TypeScript</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-card">
+                                <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
+                                <canvas id="frameworksSkillsChart"></canvas>
+                                <div class="skill-tags">
+                                    <span class="skill-tag expert">FastAPI</span>
+                                    <span class="skill-tag expert">React</span>
+                                    <span class="skill-tag advanced">Next.js</span>
+                                    <span class="skill-tag advanced">Django</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-card">
+                                <h3><i class="fas fa-database"></i> Data & Cloud</h3>
+                                <div class="database-skills">
+                                    <div class="skill-bar">
+                                        <div class="skill-info">
+                                            <span>PostgreSQL</span>
+                                            <span>90%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" data-width="90"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-info">
+                                            <span>Docker / AWS</span>
+                                            <span>85%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" data-width="85"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-info">
+                                            <span>Tableau / Power BI</span>
+                                            <span>80%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" data-width="80"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Tab -->
+                <div class="tab-pane" id="projects" role="tabpanel">
+                    <div class="projects-grid">
+                        <div class="project-card featured">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-microphone"></i>
+                                </div>
+                                <div class="project-status">
+                                    <span class="status-badge live">Live</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Thrill AI</h3>
+                                <p>Next-gen hospitality OS with real-time voice intelligence, native-language AI agents, and cinematic glassmorphic UI.</p>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">3</span>
+                                        <span class="metric-label">Languages</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">AI</span>
+                                        <span class="metric-label">Sommelier</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">RT</span>
+                                        <span class="metric-label">Voice</span>
+                                    </div>
+                                </div>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Next.js</span>
+                                    <span class="tech-tag">FastAPI</span>
+                                    <span class="tech-tag">ElevenLabs</span>
+                                    <span class="tech-tag">React</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="project-status">
+                                    <span class="status-badge development">In Development</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Aegis</h3>
+                                <p>Enterprise zero-trust infrastructure enabling Federated Learning on untrusted devices with memory-safe Rust core.</p>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">AES-256</span>
+                                        <span class="metric-label">Encryption</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">Zero</span>
+                                        <span class="metric-label">Trust</span>
+                                    </div>
+                                </div>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Rust</span>
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Crypto</span>
+                                    <span class="tech-tag">UniFFI</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-heartbeat"></i>
+                                </div>
+                                <div class="project-status">
+                                    <span class="status-badge completed">Completed</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>SwasthyaSahayak</h3>
+                                <p>AI-powered medical triage for India - understands Hinglish, handles voice notes, with Rust-based 100x faster protocol retrieval.</p>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">100x</span>
+                                        <span class="metric-label">Faster</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">Voice</span>
+                                        <span class="metric-label">Enabled</span>
+                                    </div>
+                                </div>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Rust</span>
+                                    <span class="tech-tag">PyTorch</span>
+                                    <span class="tech-tag">RAG</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Tab -->
+                <div class="tab-pane" id="education" role="tabpanel">
+                    <div class="education-container">
+                        <div class="education-grid">
+                            <div class="education-card">
+                                <div class="education-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="education-content">
+                                    <h3>M.S. in Data Analytics Engineering</h3>
+                                    <p class="institution">George Mason University</p>
+                                    <p class="duration">Jan 2024 - Dec 2025</p>
+                                    <p class="description">Specializing in AI/ML, predictive analytics, and data-driven decision making. Building expertise in Generative AI and MLOps.</p>
+                                </div>
+                            </div>
+
+                            <div class="education-card">
+                                <div class="education-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="education-content">
+                                    <h3>B.Tech in Electronics & Communication</h3>
+                                    <p class="institution">Vellore Institute of Technology</p>
+                                    <p class="duration">Jun 2019 - Apr 2023</p>
+                                    <p class="description">Foundation in signal processing, embedded systems, and programming. Active member of IEEE-NPSS with ML research contributions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="dashboard.js"></script>
+</body>
+</html>
