@@ -1,0 +1,23 @@
+{
+  "name": "video-intro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render IntroVideo out/intro.webm",
+    "render-mp4": "remotion render IntroVideo out/intro.mp4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@remotion/cli": "^4.0.424",
+    "@remotion/renderer": "^4.0.424",
+    "@types/react": "^19.2.14",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "remotion": "^4.0.424",
+    "typescript": "^5.9.3"
+  }
+}
