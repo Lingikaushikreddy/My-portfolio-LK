@@ -743,7 +743,6 @@ body[data-theme="dark"] .job-desc i {
     box-shadow: 4px 4px 0 var(--border);
     margin: 0 auto 10px;
     min-height: calc(100vh - 20px);
-    overflow-x: hidden;
   }
 
   .nav-right {
