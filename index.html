@@ -159,6 +159,10 @@
         </div>
     </div>
 
+    <!-- Generative Data Particle Background -->
+    <canvas id="particle-canvas"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
+
     <div class="page-wrapper">
         <div class="progress-bar-container" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0"
             aria-valuemax="100">
@@ -639,7 +643,7 @@
                 <!-- 1. Thrill AI -->
                 <div class="project-card">
                     <div class="project-image-wrapper">
-                        <img src="image/thrill_ai_interface_1771432759146.png" alt="Thrill AI" class="project-image"
+                        <img src="image/thrill_ai_neo_1771551687277.png" alt="Thrill AI" class="project-image"
                             loading="lazy">
                     </div>
                     <div class="project-content">
@@ -668,8 +672,7 @@
                 <!-- 2. Aegis -->
                 <div class="project-card">
                     <div class="project-image-wrapper">
-                        <img src="image/aegis_security_shield_1771432791047.png" alt="Aegis" class="project-image"
-                            loading="lazy">
+                        <img src="image/aegis_neo_1771551703205.png" alt="Aegis" class="project-image" loading="lazy">
                     </div>
                     <div class="project-content">
                         <div class="project-header">
@@ -696,8 +699,8 @@
                 <!-- 3. SwasthyaSahayak -->
                 <div class="project-card">
                     <div class="project-image-wrapper">
-                        <img src="image/medical_triage_dashboard_1771433075924.png" alt="SwasthyaSahayak"
-                            class="project-image" loading="lazy">
+                        <img src="image/swasthya_neo_1771551717604.png" alt="SwasthyaSahayak" class="project-image"
+                            loading="lazy">
                     </div>
                     <div class="project-content">
                         <div class="project-header">
@@ -723,8 +726,8 @@
                 <!-- 4. Jobs Matcher -->
                 <div class="project-card">
                     <div class="project-image-wrapper">
-                        <img src="image/jobs_matcher_visualization_1771433467708.png" alt="Jobs Matcher"
-                            class="project-image" loading="lazy">
+                        <img src="image/jobs_matcher_neo_1771551732441.png" alt="Jobs Matcher" class="project-image"
+                            loading="lazy">
                     </div>
                     <div class="project-content">
                         <div class="project-header">
@@ -750,8 +753,7 @@
                 <!-- 5. Nano -->
                 <div class="project-card">
                     <div class="project-image-wrapper">
-                        <img src="image/nano_app_showcase_1771433868484.png" alt="Nano" class="project-image"
-                            loading="lazy">
+                        <img src="image/nano_neo_1771551748761.png" alt="Nano" class="project-image" loading="lazy">
                     </div>
                     <div class="project-content">
                         <div class="project-header">
@@ -778,7 +780,7 @@
                 <!-- 6. Churn Alert -->
                 <div class="project-card">
                     <div class="project-image-wrapper">
-                        <img src="image/media__1771434232460.png" alt="Churn Alert" class="project-image"
+                        <img src="image/churn_alert_neo_1771551775877.png" alt="Churn Alert" class="project-image"
                             loading="lazy">
                     </div>
                     <div class="project-content">
@@ -805,7 +807,7 @@
                 <!-- 7. Market Trend Analysis -->
                 <div class="project-card">
                     <div class="project-image-wrapper">
-                        <img src="image/market_trend_dashboard_1771438887079.png" alt="Market Trend Analysis"
+                        <img src="image/market_trend_neo_1771551791386.png" alt="Market Trend Analysis"
                             class="project-image" loading="lazy">
                     </div>
                     <div class="project-content">
@@ -832,7 +834,7 @@
                 <!-- 8. Flyberry Gourmet -->
                 <div class="project-card">
                     <div class="project-image-wrapper">
-                        <img src="image/flyberry_gourmet_hero_1771438903077.png" alt="Flyberry Gourmet"
+                        <img src="image/flyberry_gourmet_neo_1771551809475.png" alt="Flyberry Gourmet"
                             class="project-image" loading="lazy">
                     </div>
                     <div class="project-content">
@@ -859,7 +861,7 @@
                 <!-- 9. League of Legends Portfolio -->
                 <div class="project-card">
                     <div class="project-image-wrapper">
-                        <img src="image/lol_portfolio_webgl_1771438919817.png" alt="LoL Portfolio" class="project-image"
+                        <img src="image/lol_portfolio_neo_1771551828383.png" alt="LoL Portfolio" class="project-image"
                             loading="lazy">
                     </div>
                     <div class="project-content">
@@ -887,8 +889,7 @@
                 <!-- 10. Dwara -->
                 <div class="project-card">
                     <div class="project-image-wrapper">
-                        <img src="image/dwara_real_estate_map_1771438939323.png" alt="Dwara" class="project-image"
-                            loading="lazy">
+                        <img src="image/dwara_neo_1771551842626.png" alt="Dwara" class="project-image" loading="lazy">
                     </div>
                     <div class="project-content">
                         <div class="project-header">
@@ -1745,15 +1746,17 @@
         }
         animateCursor();
 
-        const hoverTargets = document.querySelectorAll('a, button, .project-card, .contact-card, .btn-coffee, .checkpoint, .nav-link, .nav-cta');
+        const hoverTargets = document.querySelectorAll('a, button, .project-card, .contact-card, .btn-coffee, .checkpoint, .nav-link, .nav-cta, .nav-lazyfire, .ai-voice-widget');
         hoverTargets.forEach(target => {
             target.addEventListener('mouseenter', () => {
                 cursorDot.classList.add('hover');
                 cursorRing.classList.add('hover');
+                trailDots.forEach(d => d.el.classList.add('hover'));
             });
             target.addEventListener('mouseleave', () => {
                 cursorDot.classList.remove('hover');
                 cursorRing.classList.remove('hover');
+                trailDots.forEach(d => d.el.classList.remove('hover'));
             });
         });
 
@@ -1881,8 +1884,16 @@
             msg.addEventListener('click', () => { overlay.innerHTML = ''; });
             setTimeout(() => { overlay.innerHTML = ''; }, 5000);
         }
-
     </script>
+
+    <!-- AI Voice Widget -->
+    <button id="ai-voice-btn" class="ai-voice-widget" aria-label="Talk to my Resume">
+        <i class="fas fa-robot"></i>
+        <span class="tooltip-text">Talk to my Resume</span>
+    </button>
+
+    <script src="script/voice.js"></script>
+    <script src="script/particles.js"></script>
 </body>
 
 </html>
